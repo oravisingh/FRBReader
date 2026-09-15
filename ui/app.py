@@ -157,7 +157,13 @@ def section_header(icon: str, title: str):
 
 @st.cache_resource
 def get_pipeline():
-    return FRBPipeline()
+    root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    return FRBPipeline(
+        schema_path=os.path.join(root, "config", "template_schema.json"),
+        reference_path=os.path.join(root, "reference", "template.png"),
+        roster_path=os.path.join(root, "config", "roster.json"),
+        airports_path=os.path.join(root, "config", "airports.json"),
+    )
 
 
 @st.cache_data(show_spinner=False, max_entries=20, ttl=3600)

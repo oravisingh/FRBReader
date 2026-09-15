@@ -23,8 +23,8 @@ class DocumentAligner:
         self.ref_gray = cv2.cvtColor(self.ref_img, cv2.COLOR_BGR2GRAY)
         
         # Initialize Feature Detectors
-        self.sift = cv2.SIFT_create(nfeatures=4000)
-        self.orb = cv2.ORB_create(nfeatures=5000)
+        self.sift = cv2.SIFT_create(nfeatures=1500)
+        self.orb = cv2.ORB_create(nfeatures=2000)
         
         # Compute Reference Keypoints
         self.ref_kp_sift, self.ref_desc_sift = self.sift.detectAndCompute(self.ref_gray, None)
