@@ -1,0 +1,7 @@
+opencv-python==5.0.0.93
+numpy==2.4.6
+pillow==12.2.0
+pypdfium2==5.11.0
+rapidfuzz==3.14.1
+streamlit==1.51.0
+rapidocr-onnxruntime==1.2.3

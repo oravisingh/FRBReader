@@ -1,0 +1,11 @@
+# Disposable/regenerable - never part of "the project", just local build
+# artifacts. The actual deliverable is the source + requirements.txt.
+.venv/
+__pycache__/
+*.pyc
+scratch/
+.streamlit/secrets.toml
+
+# Binary sample data - too large/rejected by HF Spaces git
+data/
+reference/

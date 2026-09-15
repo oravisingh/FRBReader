@@ -1,0 +1,218 @@
+{
+  "version": "2.0",
+  "template_dimensions": [2400, 1700],
+  "fields": {
+    "page_no": {
+      "bbox": [2060, 45, 310, 60],
+      "type": "text",
+      "whitelist": "0123456789",
+      "regex": "^\\d{1,4}$",
+      "label": "Page Number"
+    },
+    "flight_date": {
+      "bbox": [1750, 45, 305, 60],
+      "type": "date",
+      "whitelist": "0123456789/.-",
+      "regex": "^(\\d{2})[/.-](\\d{2})[/.-](\\d{4})$",
+      "label": "Flight Date"
+    },
+    "from_icao": {
+      "bbox": [1410, 45, 160, 60],
+      "type": "airport_icao",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "regex": "^[A-Z0-9]{4}$",
+      "label": "Departure Airport (ICAO)"
+    },
+    "to_icao": {
+      "bbox": [1570, 45, 175, 60],
+      "type": "airport_icao",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "regex": "^[A-Z0-9]{4}$",
+      "label": "Destination Airport (ICAO)"
+    },
+    "ac_regn": {
+      "bbox": [810, 40, 200, 55],
+      "type": "registration",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ-",
+      "default": "VT-REM",
+      "label": "Aircraft Regn"
+    },
+    "ac_type": {
+      "bbox": [535, 40, 275, 55],
+      "type": "text",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ",
+      "default": "SUPER KING AIR B200",
+      "label": "Aircraft Type"
+    },
+    "chk_revenue": {
+      "bbox": [1370, 138, 50, 42],
+      "type": "checkbox",
+      "label": "Revenue Flight"
+    },
+    "chk_non_revenue": {
+      "bbox": [1550, 138, 50, 42],
+      "type": "checkbox",
+      "label": "Non-Revenue Flight"
+    },
+    "pic_name": {
+      "bbox": [645, 140, 185, 70],
+      "type": "pilot_name",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ. ",
+      "label": "PIC Name"
+    },
+    "pic_staff_id": {
+      "bbox": [830, 140, 180, 70],
+      "type": "staff_id",
+      "whitelist": "0123456789",
+      "label": "PIC Staff ID"
+    },
+    "fo_name": {
+      "bbox": [645, 212, 185, 70],
+      "type": "pilot_name",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ. ",
+      "label": "F/O Name"
+    },
+    "fo_staff_id": {
+      "bbox": [830, 212, 180, 70],
+      "type": "staff_id",
+      "whitelist": "0123456789",
+      "label": "F/O Staff ID"
+    },
+    "chocks_off": {
+      "bbox": [246, 145, 291, 31],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "Chocks Off (UTC)"
+    },
+    "airborne": {
+      "bbox": [246, 176, 291, 31],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "Airborne (UTC)"
+    },
+    "touch_down": {
+      "bbox": [246, 209, 291, 32],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "Touchdown (UTC)"
+    },
+    "chocks_on": {
+      "bbox": [246, 243, 291, 30],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "Chocks On (UTC)"
+    },
+    "time_in_air": {
+      "bbox": [246, 275, 291, 31],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "Time in Air"
+    },
+    "block_time": {
+      "bbox": [246, 308, 291, 32],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "Block Time"
+    },
+    "full_stop_ldg": {
+      "bbox": [400, 410, 110, 45],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "Full Stop Landings"
+    },
+    "log_hrs_bf": {
+      "bbox": [246, 338, 291, 40],
+      "type": "duration",
+      "whitelist": "0123456789 ",
+      "label": "Log Hours Brought Forward"
+    },
+    "total_hours": {
+      "bbox": [246, 380, 291, 42],
+      "type": "duration",
+      "whitelist": "0123456789 ",
+      "label": "Total Hours"
+    },
+    "landings_bf": {
+      "bbox": [340, 488, 170, 40],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "Landings Brought Forward"
+    },
+    "total_ldgs": {
+      "bbox": [340, 525, 170, 40],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "Total Landings (Cumulative)"
+    },
+    "fuel_company": {
+      "bbox": [670, 915, 360, 110],
+      "type": "text",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "label": "Fuel Company"
+    },
+    "pre_uplift_fob": {
+      "bbox": [235, 915, 295, 55],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "Pre Uplift FOB (LBS)"
+    },
+    "departure_fob": {
+      "bbox": [235, 970, 295, 55],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "Departure FOB (LBS)"
+    },
+    "actual_uplift": {
+      "bbox": [235, 1025, 295, 55],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "Actual Uplift (LBS)"
+    },
+    "chk_pax": {
+      "bbox": [1110, 1375, 45, 38],
+      "type": "checkbox",
+      "label": "PAX Config"
+    },
+    "chk_medivac": {
+      "bbox": [1220, 1375, 45, 38],
+      "type": "checkbox",
+      "label": "Medivac Config"
+    },
+    "defect_status": {
+      "bbox": [845, 460, 600, 280],
+      "type": "text",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ ",
+      "label": "Pilot Reported Defect"
+    },
+    "eng1_auth_lic_no": {
+      "bbox": [790, 1403, 200, 45],
+      "type": "text",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/",
+      "label": "Pre-Flight Sign-off - ENG1 Auth/Lic No"
+    },
+    "eng2_auth_lic_no": {
+      "bbox": [1175, 1483, 340, 42],
+      "type": "text",
+      "whitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/",
+      "label": "Pre-Flight Sign-off - ENG2 Auth/Lic No"
+    },
+    "pic_lic_no": {
+      "bbox": [470, 1633, 210, 42],
+      "type": "number",
+      "whitelist": "0123456789",
+      "label": "PIC Signature - Lic No"
+    },
+    "pic_sig_time": {
+      "bbox": [860, 1633, 140, 42],
+      "type": "time",
+      "whitelist": "0123456789:",
+      "label": "PIC Signature - Time"
+    },
+    "pic_sig_date": {
+      "bbox": [1190, 1633, 270, 42],
+      "type": "date",
+      "whitelist": "0123456789/.-",
+      "label": "PIC Signature - Date"
+    }
+  }
+}
