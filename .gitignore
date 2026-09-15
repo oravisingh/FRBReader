@@ -5,7 +5,3 @@ __pycache__/
 *.pyc
 scratch/
 .streamlit/secrets.toml
-
-# Binary sample data - too large/rejected by HF Spaces git
-data/
-reference/
